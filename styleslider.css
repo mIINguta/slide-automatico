@@ -1,0 +1,91 @@
+/*uso essa sec para segurar o slider */
+.slider{
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+/* div que segura as fotos e o passador do slide*/
+.div-conteiner{
+    width: 375px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    justify-content: center;
+}
+.slides{
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+.slides input{
+   display: none;
+}
+.slide{
+    width:20%;
+    transition: 2s;
+}
+.navigation-manual{
+    margin-top: 10px;
+    display:none;
+}
+.manual-btn{
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+.manual-btn:hover{
+    background-color: gray;
+}
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+#radio2:checked ~ .first{
+    margin-left: -20%;
+}
+#radio3:checked ~ .first{
+    margin-left: -40%;
+}
+#radio4:checked ~ .first{
+    margin-left: -60%;
+}
+#radio5:checked ~ .first{
+    margin-left: -80%;
+}
+.navigation-auto{
+    display: flex;
+}
+.navigation-auto div{
+    display: none;
+    border: 2px solid red;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+    background-color: black;
+}
+.navigation-auto div:not(:last-child){
+    margin-right:40px;
+}
+#radio1:checked ~.navigation-auto .auto-btn1{
+    background: black;
+}
+#radio2:checked ~.navigation-auto .auto-btn2{
+    background: black;
+}
+#radio3:checked ~.navigation-auto .auto-btn3{
+    background: black;
+}
+#radio4:checked ~.navigation-auto .auto-btn4{
+    background: black;
+}
+#radio5:checked ~.navigation-auto .auto-btn5{
+    background: black;
+}
+@media  (max-width: 600px){
+    .slider{
+        margin: 0px 20px;
+    }
+}
